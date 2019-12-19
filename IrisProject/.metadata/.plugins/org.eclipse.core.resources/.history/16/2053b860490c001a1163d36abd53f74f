@@ -1,0 +1,54 @@
+package com.project.test;
+
+import static java.lang.System.out;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertTrue;  //Static import
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Ignore;
+import org.junit.Test;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.project.config.DBConfig;
+import com.project.models.Buyer;
+import com.project.services.BuyerService;
+
+
+public class TestClass {
+
+	private static BuyerService buyerService;
+	
+	@BeforeClass
+	public static void init(){
+	
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DBConfig.class);
+	 	
+		buyerService=context.getBean(BuyerService.class,"buyerService");
+   	 	System.out.println("I m in init - end");
+	}
+	
+	@Test
+	@Ignore
+	public void addBuyerTest(){
+		Buyer bObj=new Buyer();
+		bObj.setBuyer_Name("Karnika Agarwal");
+		bObj.setBuyer_Address("Noida");
+		bObj.setEmail_Id("karnikaa17@gmail.com");
+		bObj.setBuyer_Password("kkk");
+		bObj.setCreated_By("System");
+		bObj.setCreated_date(LocalDate.now());
+		bObj.setPhone_No(9560230212l);
+		bObj.setRole_Id(1);
+		bObj.setIs_Active("Y");
+		
+		boolean b=buyerService.addBuyer(bObj);
+		assertTrue("Problem in Adding Buyer", b);
+	}
+	
+	
+}

@@ -1,0 +1,29 @@
+package com.project.servicesimpl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.project.dao.BuyerDao;
+import com.project.models.Buyer;
+
+@Service("buyerService")
+@Transactional
+public class BuyerServiceImpl {
+
+	@Autowired
+	BuyerDao buyerDao;
+	
+	public boolean addBuyer(Buyer bObj)
+	{
+		
+		
+		
+		
+		
+		
+		
+	}
+		
+	
+}

@@ -1,0 +1,18 @@
+.colors{
+
+    height:80px;
+    width: 60px;
+}
+
+
+
+table tr td input{
+background-color:white;
+}
+table tr td textarea{
+    background-color:white;
+}
+table tr td select{
+    background-color:white;
+
+}

@@ -1,0 +1,63 @@
+<!--
+An animation is a visual technique that provides the illusion that an object is moving by displaying graphic object in rapid sequence.In animation , the object is drawn first , next the canvas is cleared and then the frame is drawn again with slight changes in its properties . The process is repeated very fast to create an illusion . 
+
+To create animations , U need to perform the following steps:-
+1. Create variables for the animation state.
+2. Draw the animation.
+3. Redraw the object.
+-->
+
+<!DOCTYPE html>
+<HTML>
+	<body>
+		<canvas id="myCanvas" width="450" height="450" style="border: 1px solid black">
+		</canvas>
+		<script type="text/javascript">
+			var canvas;
+			var ctx;
+			var x=400;
+			var y=300;
+			var dx=2;
+			var dy=4;
+			var width=450;
+			var height=450;
+
+			function circle(){
+				ctx.beginPath();
+				ctx.fillStyle="red";
+				ctx.arc(x,y,10,0,Math.PI*2);
+				ctx.fill();
+				ctx.closePath();
+			}
+			function clear(){
+				ctx.clearRect(0,0,width,height);
+			}
+			function init(){
+				canvas=document.getElementById("myCanvas");
+
+				ctx=canvas.getContext("2d");
+				return setInterval(draw,20);
+
+			}
+			function draw(){
+				clear();
+				circle();
+				if(x>width || x<0)
+					dx=-dx;
+				if(y>height||y<0)
+					dy=-dy;
+				x+=dx;
+				y+=dy;
+				console.log("x = "+x+" and y = "+y);
+			}
+			init();
+			
+		</script>
+	</body>
+</HTML>
+
+
+
+
+
+

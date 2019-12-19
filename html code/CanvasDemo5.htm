@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<HTML>
+	<body>
+		<canvas id="myCanvas" width="250" height="250" style="border: 1px solid black">
+		</canvas>
+		<script type="text/javascript">
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			var img=new Image();
+			img.src="images\\smiley.gif";
+			img.onload=function(){
+				ctx.drawImage(img,10,10,150,150);
+			}
+		</script>
+	</body>
+</HTML>

@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>Canvas Demo - Working With Text</title>
+
+	</head>
+	<body>
+			<canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;">
+				
+			</canvas>
+			<script type="text/javascript">
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				ctx.font = "30px Comic sans ms";
+				
+				/*fillText(text,x,y) - draws "filled" text on the canvas*/
+				//ctx.fillText("Hello World", 10, 50);
+
+				/*strokeText(text,x,y) - draws text on the canvas (no fill)*/
+				//ctx.strokeText("Hello World", 10, 150);
+
+				ctx.fillStyle = "red";
+				ctx.textAlign = "center";
+				ctx.fillText("Hello World", canvas.width/2, canvas.height/2);
+
+			</script>
+	</body>
+</html>

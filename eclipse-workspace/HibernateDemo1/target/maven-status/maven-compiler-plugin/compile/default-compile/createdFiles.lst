@@ -1,0 +1,6 @@
+com\iris\daos\UserDao.class
+com\iris\model\User.class
+com\iris\utility\SessionFactoryProvider.class
+com\iris\daosImpl\UserDaoImpl.class
+com\iris\main\Main.class
+com\iris\HibernateDemo1\App.class

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Canvas Demo  - Drawing a Line</title>
+
+	</head>
+	<body>
+			<canvas id="myCanvas" width="500" height="300" style="border:1px solid #000000;">
+				
+			</canvas>
+			
+			<script type="text/javascript">
+				var canvas=document.getElementById("myCanvas");
+
+				/*Define a starting point in position (0,0), and an ending point in position (200,100). Then use the stroke() method to actually draw the line:*/
+				var ctx=canvas.getContext("2d");
+				ctx.moveTo(10,10);
+				ctx.lineTo(70,10);
+				ctx.stroke();
+
+				//Drawing Circle
+				/*
+				arc(x,y,r,startangle,endangle) - creates an arc/curve. To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI. The x and y parameters define the x- and y-coordinates of the center of the circle. The r parameter defines the radius of the circle.
+				*/
+				ctx.beginPath();
+				ctx.arc(100,150,150,0,2*Math.PI);
+				ctx.stroke();
+			</script>
+	</body>
+</html>

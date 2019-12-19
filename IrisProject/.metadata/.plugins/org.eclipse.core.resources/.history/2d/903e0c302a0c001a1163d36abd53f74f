@@ -1,0 +1,9 @@
+package com.project.servicesimpl;
+
+import org.springframework.stereotype.Service;
+
+@Service("buyerService")
+public class BuyerServiceImpl {
+
+	
+}

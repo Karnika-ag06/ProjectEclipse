@@ -1,0 +1,36 @@
+package com.project.servicesimpl;
+
+import java.time.LocalDate;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.project.dao.BuyerDao;
+import com.project.models.Buyer;
+import com.project.services.BuyerService;
+
+@Service("buyerService")
+@Transactional
+public class BuyerServiceImpl implements BuyerService {
+
+	@Autowired
+	BuyerDao buyerDao;
+	
+	public boolean addBuyer(Buyer bObj)
+	{
+		bObj.setRole_Id(1);
+		bObj.setCreated_date(LocalDate.now());
+		bObj.setCreated_By("System");
+		bObj.setIs_Active("y");
+		return buyerDao.addBuyer(bObj);
+		
+	}
+
+	public Buyer validateBuyer(String email, String password) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+		
+	
+}

@@ -1,0 +1,108 @@
+div.div1{
+ background-color:#0000A0;
+ font-size:30px;
+ color:white;
+ text-align:center;
+ height:100px;
+  width:1200px;
+ padding:10px;
+ float:left;
+border:solid;
+ }
+
+div.image{
+float:right;
+border:solid;
+}
+
+div.div2{
+padding-top:10px;
+background-color:#0000A0;
+color:white;
+height:600px;
+  width:435px;
+border:solid;
+ float:left;
+
+ }
+ ul#menu li{
+ text-align:center;
+ display:inline;
+ font-size:30px;
+ }
+ ul#menu li a{
+ text-decoration:none;
+ color:white;
+ }
+div.finaldiv{
+float:left;
+height:600px;
+width:600px;
+color:blue;
+}
+div.aboutus{
+float:left;
+height:650px;
+width:950px;
+color:blue;
+border:solid;
+border-color:black;
+}
+div.contactus{
+float:left;
+height:600px;
+width:950px;
+text-align:center;
+}
+table.tabcontact{
+margin-left:auto;
+margin-right:auto;
+}
+
+
+
+
+div.admission{
+text-align:center;
+float:left;
+height:800px;
+width:850px;
+
+}
+table.admtable{
+margin-left:auto;
+margin-right:auto;
+}
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

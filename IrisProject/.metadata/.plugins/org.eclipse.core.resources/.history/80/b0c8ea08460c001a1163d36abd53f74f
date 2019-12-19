@@ -1,0 +1,11 @@
+package com.project.servicesimpl;
+
+import org.springframework.stereotype.Service;
+
+import com.project.models.Buyer;
+
+@Service("buyerService")
+public class BuyerServiceImpl {
+
+	public boolean addBuyer(Buyer bObj);
+}

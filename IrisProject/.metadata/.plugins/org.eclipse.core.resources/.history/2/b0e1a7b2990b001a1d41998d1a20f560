@@ -1,0 +1,36 @@
+package com.project.daoimpl;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.project.dao.BuyerDao;
+import com.project.models.Buyer;
+
+
+@Repository("productDao")
+@Transactional
+public class BuyerDaoImpl implements BuyerDao {
+
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	
+	
+
+	public boolean addBuyer(Buyer bObj) {
+		try {
+			Session session=sessionFactory.getCurrentSession();
+			session.persist(bObj);
+			return true;
+			}
+			catch(Exception e){
+				e.printStackTrace();
+			}
+			return false;
+	}

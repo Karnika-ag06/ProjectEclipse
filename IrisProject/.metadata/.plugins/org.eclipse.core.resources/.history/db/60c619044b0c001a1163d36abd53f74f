@@ -1,0 +1,108 @@
+package com.project.models;
+
+import java.time.LocalDate;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Buyer")
+public class Buyer {
+
+	@Id
+	private int Buyer_Id;
+	private String Buyer_Name;
+	private String Buyer_Address;
+	private long Phone_No;
+	private String Email_Id;
+	private String Buyer_Password;
+	private int Role_Id;
+	private LocalDate Created_date;
+	private LocalDate Updated_date;
+	private String Created_By;
+	private String Updated_By;
+	private String Is_Active;
+	
+	public int getBuyer_Id() {
+		return Buyer_Id;
+	} 
+	public void setBuyer_Id(int buyer_Id) {
+		Buyer_Id = buyer_Id;
+	}
+	public String getBuyer_Name() {
+		return Buyer_Name;
+	}
+	public void setBuyer_Name(String buyer_Name) {
+		Buyer_Name = buyer_Name;
+	}
+	public String getBuyer_Address() {
+		return Buyer_Address;
+	}
+	public void setBuyer_Address(String buyer_Address) {
+		Buyer_Address = buyer_Address;
+	}
+	public long getPhone_No() {
+		return Phone_No;
+	}
+	public void setPhone_No(long phone_No) {
+		Phone_No = phone_No;
+	}
+	public String getEmail_Id() {
+		return Email_Id;
+	}
+	public void setEmail_Id(String email_Id) {
+		Email_Id = email_Id;
+	}
+	public String getBuyer_Password() {
+		return Buyer_Password;
+	}
+	public void setBuyer_Password(String buyer_Password) {
+		Buyer_Password = buyer_Password;
+	}
+	public int getRole_Id() {
+		return Role_Id;
+	}
+	public void setRole_Id(int role_Id) {
+		Role_Id = role_Id;
+	}
+	public LocalDate getCreated_date() {
+		return Created_date;
+	}
+	public void setCreated_date(LocalDate created_date) {
+		Created_date = created_date;
+	}
+	public LocalDate getUpdated_date() {
+		return Updated_date;
+	}
+	public void setUpdated_date(LocalDate updated_date) {
+		Updated_date = updated_date;
+	}
+	public String getCreated_By() {
+		return Created_By;
+	}
+	public void setCreated_By(String created_By) {
+		Created_By = created_By;
+	}
+	public String getUpdated_By() {
+		return Updated_By;
+	}
+	public void setUpdated_By(String updated_By) {
+		Updated_By = updated_By;
+	}
+	public String getIs_Active() {
+		return Is_Active;
+	}
+	public void setIs_Active(String is_Active) {
+		Is_Active = is_Active;
+	}
+	
+	@Override
+	public String toString() {
+		return "Buyer [Buyer_Id=" + Buyer_Id + ", Buyer_Name=" + Buyer_Name + ", Buyer_Address=" + Buyer_Address
+				+ ", Phone_No=" + Phone_No + ", Email_Id=" + Email_Id + ", Buyer_Password=" + Buyer_Password
+				+ ", Role_Id=" + Role_Id + ", Created_date=" + Created_date + ", Updated_date=" + Updated_date
+				+ ", Created_By=" + Created_By + ", Updated_By=" + Updated_By + ", Is_Active=" + Is_Active + "]";
+	}	
+}

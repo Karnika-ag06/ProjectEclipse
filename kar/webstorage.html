@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+<title>WebStorage Demo</title>
+<script type="text/javascript">
+function myFunc(){
+  var inp1=document.getElementById("product").value;
+  var inp2=document.getElementById("qty").value;
+
+      sessionStorage.setItem("pro",inp1);
+      sessionStorage.setItem("quantity",inp2);
+       
+       var existingData=document.getElementById("showData").innerHTML;  
+      document.getElementById("showData").innerHTML= existingData+" "+sessionStorage.getItem("pro")+" "+sessionStorage.getItem("quantity");
+         }
+         </script>
+</head>
+  <body>
+  <div align="center">
+  <h1>WebStorage Demo</h1>
+  
+     <form>
+     <table>
+     
+     <tr>
+     <td> Select Product: </td>
+       
+        <td><select id="product">
+        <option value="none">-----Select product------</option>
+        <option >mobile phone</option>
+        <option >tablets</option>
+        <option >watches</option>
+        <option >rings</option>
+        </select>
+     </td>
+    </tr>
+   
+    <tr>
+    <td>
+       Quantity:</td>
+       <td><input type="text" id="qty"/>
+       </td>
+       </tr>
+       
+       <tr>
+       <td></td>
+      <td>
+      <button type="button" id="addBtn" onclick="myFunc()">ADD </button>
+      </td>
+      </tr>
+      
+      </table>
+       </form>
+       </div>
+   
+<div id="showData">
+</div>
+    </body>
+      </html>
+      
+      
+      
+      
+      
+      

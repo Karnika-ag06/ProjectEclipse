@@ -1,0 +1,30 @@
+package com.project.models;
+
+import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Buyer_details")
+public class BuyerDetail {
+
+	
+	@Id
+	private int Buyer_Id;
+	
+	private String name ;
+	private String Email_Id;
+	private String Buyer_Password;
+	private String Buyer_Address;
+	private long Phone_No;
+	private String Is_Active;
+	private LocalDate Created_date;
+	private String Created_By;
+	private String Updated_By;
+	private LocalDate Updated_date;
+	private int Role_Id;
+
+	
+}

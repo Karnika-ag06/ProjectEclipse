@@ -1,0 +1,8 @@
+package com.project.servicesimpl;
+
+
+
+@Service("buyerService")
+public class BuyerServiceImpl {
+
+}

@@ -1,0 +1,21 @@
+package com.project.models;
+
+import java.util.Date;
+
+public class Buyer {
+
+	private int Buyer_Id;
+	private String Buyer_name;
+	private String Buyer_Address;
+	private String Phone_No;
+	private String Email_Id;
+	private String Buyer_Password;
+	private String Role_Id;
+	private Date Created_date;
+	private String Created_By;
+	private Date Updated_date;
+	private String Updated_By;
+	private String Is_Active;
+	
+		
+}

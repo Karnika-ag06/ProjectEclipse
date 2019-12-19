@@ -1,0 +1,5 @@
+package com.project.servicesimpl;
+
+public class BuyerServiceImpl {
+
+}
